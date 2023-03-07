@@ -23,7 +23,7 @@ public class GnewsClient
     {
         _httpClient = httpClient ?? new HttpClient();
 
-        _httpClient.BaseAddress = new Uri(options.ApiBaseAddress);
+        _httpClient.BaseAddress = new Uri(string.IsNullOrWhiteSpace(options.ApiBaseAddress) ? "https://gnews.io/api/v4/" : options.ApiBaseAddress);
 
         if (string.IsNullOrWhiteSpace(options.ApiKey))
         {

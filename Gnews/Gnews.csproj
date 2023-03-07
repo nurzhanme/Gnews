@@ -11,9 +11,10 @@
     <RepositoryUrl>https://github.com/nurzhanme/Gnews</RepositoryUrl>
     <Copyright>Copyright © Nurzhan Aitbayev</Copyright>
     <PackageTags>gnews;news;google news;bbc;cnn;</PackageTags>
-    <Title>Gnews API Client</Title>
+    <Title>Gnews is a C# wrapper for the GNews API. With Gnews, you can easily integrate the GNews API into your C# application and access news articles and metadata from thousands of news sources worldwide.</Title>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
