@@ -3,6 +3,7 @@ using System.Text.Json;
 using Gnews.Constants;
 using Gnews.Requests;
 using Gnews.Responses;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
 namespace Gnews;
@@ -13,17 +14,22 @@ public class GnewsClient
     private readonly HttpClient _httpClient;
     private const string TZDFormat = "yyyy-MM-ddTHH:mm:sszzz";
 
-    public GnewsClient(IOptions<GnewsClientOptions> options, HttpClient httpClient)
+    [ActivatorUtilitiesConstructor]
+    public GnewsClient(IOptions<GnewsClientOptions> options, HttpClient httpClient) : this(options.Value, httpClient)
     {
-        _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+    }
 
-        _httpClient.BaseAddress = new Uri(options.Value.ApiBaseAddress);
+    public GnewsClient(GnewsClientOptions options, HttpClient? httpClient = null)
+    {
+        _httpClient = httpClient ?? new HttpClient();
 
-        if (string.IsNullOrWhiteSpace(options.Value.ApiKey))
+        _httpClient.BaseAddress = new Uri(options.ApiBaseAddress);
+
+        if (string.IsNullOrWhiteSpace(options.ApiKey))
         {
-            throw new ArgumentException(nameof(options.Value.ApiKey));
+            throw new ArgumentException(nameof(options.ApiKey));
         }
-        _apiKey = options.Value.ApiKey;
+        _apiKey = options.ApiKey;
     }
 
     public async Task<ApiResponse> Search(SearchRequest request)
