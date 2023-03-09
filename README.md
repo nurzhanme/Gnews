@@ -2,11 +2,14 @@
 
 Gnews is a C# wrapper for the GNews API. With Gnews, you can easily integrate the GNews API into your C# application and access news articles and metadata from thousands of news sources worldwide.
 
-If you like this project please give a star =)
 
-[![NuGet Badge](https://buildstats.info/nuget/Gnews)](https://www.nuget.org/packages/Gnews/)
+If you like this project please give a star and a cup of coffee =)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/nurzhame)
 
 ## Installation
+
+[![NuGet Badge](https://buildstats.info/nuget/Gnews)](https://www.nuget.org/packages/Gnews/)
 
 To install Gnews, you can use the NuGet package manager in Visual Studio. Simply search for "Gnews" and click "Install".
 
