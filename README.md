@@ -5,7 +5,7 @@ Gnews is a C# wrapper for the GNews API. With Gnews, you can easily integrate th
 
 If you like this project please give a star and a cup of coffee =)
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/nurzhame)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/nurzhanme)
 
 ## Installation
 
